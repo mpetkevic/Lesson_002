@@ -34,6 +34,8 @@ if (defined("PI")) {
 echo "<br>";
 echo "Constant PI = " . PI;
 
+//PI = 3; error can't change constant value;
+
 echo "<hr>";
 
 echo "Задание 4" . "<br>";
