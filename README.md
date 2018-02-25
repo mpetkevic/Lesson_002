@@ -61,8 +61,11 @@ b. speed c. doors d. year
 Например:
 
    CAR name
+   
 name  model  speed  doors  year
-    CAR bmw
+
+   CAR bmw
+   
 X5  120  5  2015
 
 
