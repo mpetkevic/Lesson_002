@@ -91,3 +91,70 @@ foreach ($cars as $key => $item) {
     echo "Car " . $key . "<br>";
     echo "name: " . $item["name"] . " speed: " . $item["speed"] . " doors: " . $item["doors"] . " year: " . $item["year"] . "<br>";
 }
+
+
+echo "<hr>";
+
+echo "Задание 7" . "<br>";
+
+echo "<table border='1'>";
+
+for ($i = 1; $i <= 10; $i++) {
+    echo "<tr>";
+
+    for ($j = 1; $j <= 10; $j++) {
+        echo "<td>";
+
+        if ($i % 2 == 0 && $j % 2 == 0) {
+            echo "(" . $result = $i * $j . ")" . "</td>";
+        } elseif ($i % 2 != 0 && $j % 2 != 0) {
+            echo "[" . $result = $i * $j . "]" . "</td>";
+        } else {
+            echo $result = $i * $j . "</td>";
+        }
+    }
+
+    echo "</tr>";
+}
+
+echo "</table>";
+
+echo "<hr>";
+
+echo "Задание 8" . "<br>";
+
+$str = "123 456";
+$arr = explode(" ", $str);
+$length = count($arr) - 1;
+$newArr = [];
+
+while ($length >= 0) {
+    $newArr[] = $arr[$length];
+    $length--;
+}
+
+//var_dump($newArr);
+$newStr = implode("%", $newArr);
+
+echo "String = " . $str . "<br>";
+echo "New string = " . $newStr;
+
+echo "<hr>";
+
+echo "Задание доп" . "<br>";
+
+$data = [0, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 1, 4181, 6765, 10946, 17711];
+
+//print_r($data);
+
+sort ($data);
+
+
+
+$sortedData = [];
+
+for ($k = 0; $k < count($data); $k++) {
+    $sortedData[] = $data[$k];
+}
+
+var_dump($sortedData);
