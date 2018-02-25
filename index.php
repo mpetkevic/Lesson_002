@@ -1,7 +1,7 @@
 <?php
 echo "Задание 1" . "<br>";
 $name = "Miroslav";
-$age = "31";
+$age = (string)31;
 
 echo "Меня зовут " . $name . "<br>";
 echo "Мне " . $age . " лет" . "<br>";
