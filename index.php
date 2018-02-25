@@ -1,7 +1,7 @@
 <?php
 echo "Задание 1" . "<br>";
 $name = "Miroslav";
-$age = 31;
+$age = "31";
 
 echo "Меня зовут " . $name . "<br>";
 echo "Мне " . $age . " лет" . "<br>";
@@ -26,7 +26,7 @@ echo "Задание 3" . "<br>";
 
 define("PI", 3.14);
 
-if(defined("PI")) {
+if (defined("PI")) {
     echo "Constant exists";
 } else {
     echo "Constant doesn't exists";
@@ -38,25 +38,34 @@ echo "<hr>";
 
 echo "Задание 4" . "<br>";
 
-$newAge = mt_rand(0,89);
+$newAge = mt_rand(0, 89);
 
 echo "Возраст = " . $newAge . "<br>";
 
-if ($newAge >= 18 && $newAge <= 65) {
+define("age_min", 0);
+define("age_normal", 18);
+define("age_wrong", 65);
+
+if ($newAge >= age_normal && $newAge <= age_wrong) {
     echo "Вам еще работать и работать";
-} elseif ($newAge < 18 && $newAge > 0) {
+} elseif ($newAge < age_wrong && $newAge > age_min) {
     echo "Вам ещё рано работать";
-} elseif ($newAge > 65) {
+} elseif ($newAge > age_wrong) {
     echo "Вам пора на пенсию";
 } else {
     echo "Неизвестный возраст";
 }
 
+
+
+
+
+
 echo "<hr>";
 
 echo "Задание 5" . "<br>";
 
-$day = mt_rand(0,8);
+$day = mt_rand(0, 8);
 
 echo "День = " . $day . "<br>";
 
@@ -147,8 +156,7 @@ $data = [0, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 25
 
 //print_r($data);
 
-sort ($data);
-
+sort($data);
 
 
 $sortedData = [];
